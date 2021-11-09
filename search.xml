@@ -18,4 +18,37 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>网络诊断工具</title>
+    <url>/Linux/%E7%BD%91%E7%BB%9C%E8%AF%8A%E6%96%AD/</url>
+    <content><![CDATA[<h2 id="网络链路测试工具-Linux系统"><a href="#网络链路测试工具-Linux系统" class="headerlink" title="网络链路测试工具 - Linux系统"></a><strong>网络链路测试工具 - Linux系统</strong></h2><h3 id="MTR"><a href="#MTR" class="headerlink" title="MTR"></a>MTR</h3><p>简介：</p>
+<p>mtr（My traceroute）几乎是所有Linux发行版本预装的网络测试工具。其将 ping 和 <a href="http://traceroute.sourceforge.net/">traceroute</a> 的功能合并，所以功能更强大。mtr默认发送ICMP数据包进行链路探测。您也可以通过“-u”参数来指定使用UDP数据包进行探测。相对于traceroute只会做一次链路跟踪测试，mtr会对链路上的相关节点做持续探测并给出相应的统计信息。所以，mtr能避免节点波动对测试结果的影响，所以其测试结果更正确，建议优先使用。</p>
+<p>相关帮助文档：</p>
+<p><a href="http://www.bitwizard.nl/mtr/">http://www.bitwizard.nl/mtr/</a></p>
+<p><a href="https://help.aliyun.com/knowledge_detail/98706.html">https://help.aliyun.com/knowledge_detail/98706.html</a></p>
+<h3 id="拓展知识点：Traceroute"><a href="#拓展知识点：Traceroute" class="headerlink" title="拓展知识点：Traceroute"></a>拓展知识点：Traceroute</h3><p>traceroute 网络测试工具，用于跟踪Internet协议（IP）数据包传送到目标地址时经过的路径。traceroute先发送小的具有最大存活时间值（Max_TTL）的UDP探测数据包，然后侦听从网关开始的整个链路上的ICMP TIME_EXCEEDED响应。探测从TTL=1开始，TTL值逐步增加，直至接收到ICMP PORT_UNREACHABLE消息。ICMP PORT_UNREACHABLE消息用于标识目标主机已经被定位，或命令已经达到允许跟踪的最大TTL值。traceroute默认发送UDP数据包进行链路探测。可以通过“-I”参数来指定使用ICMP数据包进行探测。</p>
+<p>作用：可以定位从源主机到目标主机之间经过了哪些路由器，以及到达各个路由器的耗时。</p>
+<p>相关帮助文档：</p>
+<p><a href="http://traceroute.sourceforge.net/">http://traceroute.sourceforge.net/</a></p>
+<p><a href="https://linux.die.net/man/8/traceroute">https://linux.die.net/man/8/traceroute</a></p>
+<h2 id="UDP-PPS测试-和-TCP带宽测试"><a href="#UDP-PPS测试-和-TCP带宽测试" class="headerlink" title="UDP PPS测试 和 TCP带宽测试"></a><strong>UDP PPS测试 和</strong> <strong>TCP带宽测试</strong></h2><h3 id="iperf3"><a href="#iperf3" class="headerlink" title="iperf3"></a>iperf3</h3><p>简介：</p>
+<p>iPerf3 是一种用于主动测量 IP 网络上可实现的最大带宽的工具。它支持调整与时序、缓冲区和协议（TCP、UDP、带有 IPv4 和 IPv6 的 SCTP）相关的各种参数。对于每次测试，它都会报告带宽、损耗和其他参数。</p>
+<p>这是一个新的实现，它不与原始 iPerf 共享代码，也不向后兼容。iPerf 最初是由NLANR/DAST开发的。iPerf3 主要由ESnet /劳伦斯伯克利国家实验室 开发。</p>
+<p>相关帮助文档：</p>
+<p><a href="https://iperf.fr/">https://iperf.fr/</a></p>
+<p><a href="http://software.es.net/iperf/index.html">http://software.es.net/iperf/index.html</a></p>
+<h3 id="Netperf"><a href="#Netperf" class="headerlink" title="Netperf"></a>Netperf</h3><p>简介：</p>
+<p>Netperf是一种网络性能的测量工具，主要针对基于<a href="https://baike.baidu.com/item/TCP/33012">TCP</a>或<a href="https://baike.baidu.com/item/UDP/571511">UDP</a>的传输。Netperf根据应用的不同，可以进行不同模式的网络性能测试，即批量数据传输（bulk data transfer）模式和请求/应答（request/reponse）模式。Netperf测试结果所反映的是一个系统能够以多快的速度向另外一个系统发送数据，以及另外一个系统能够以多快的速度接收数据。</p>
+<p>相关帮助文档：</p>
+<p><a href="https://help.aliyun.com/knowledge_detail/55757.html?spm=5176.21213303.J_6704733920.7.4b0f3edavkBkZV&scm=20140722.S_help@@%E7%9F%A5%E8%AF%86%E7%82%B9@@55757.S_hot+os0.ID_55757-RL_pps%E6%B5%8B%E8%AF%95-OR_helpmain-V_2-P0_0">网络性能测试</a></p>
+<p>扩展知识点：</p>
+<p>Pktgen：<a href="https://help.aliyun.com/document_detail/260258.htm?spm=a2c4g.11186623.0.0.36005aa38gqGrL">https://help.aliyun.com/document_detail/260258.htm?spm=a2c4g.11186623.0.0.36005aa38gqGrL</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
 </search>

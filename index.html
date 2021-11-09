@@ -118,6 +118,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="xiaob blogs" type="application/atom+xml" />
+
 
 
 
@@ -359,6 +361,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xiaob666.github.io/Linux/%E7%BD%91%E7%BB%9C%E8%AF%8A%E6%96%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaob.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xiaob blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Linux/%E7%BD%91%E7%BB%9C%E8%AF%8A%E6%96%AD/" itemprop="url">网络诊断工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-11-08T23:17:27+08:00">
+                2021-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  713 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="网络链路测试工具-Linux系统"><a href="#网络链路测试工具-Linux系统" class="headerlink" title="网络链路测试工具 - Linux系统"></a><strong>网络链路测试工具 - Linux系统</strong></h2><h3 id="MTR"><a href="#MTR" class="headerlink" title="MTR"></a>MTR</h3><p>简介：</p>
+<p>mtr（My traceroute）几乎是所有Linux发行版本预装的网络测试工具。其将 ping 和 <a target="_blank" rel="noopener" href="http://traceroute.sourceforge.net/">traceroute</a> 的功能合并，所以功能更强大。mtr默认发送ICMP数据包进行链路探测。您也可以通过“-u”参数来指定使用UDP数据包进行探测。相对于traceroute只会做一次链路跟踪测试，mtr会对链路上的相关节点做持续探测并给出相应的统计信息。所以，mtr能避免节点波动对测试结果的影响，所以其测试结果更正确，建议优先使用。</p>
+<p>相关帮助文档：</p>
+<p><a target="_blank" rel="noopener" href="http://www.bitwizard.nl/mtr/">http://www.bitwizard.nl/mtr/</a></p>
+<p><a target="_blank" rel="noopener" href="https://help.aliyun.com/knowledge_detail/98706.html">https://help.aliyun.com/knowledge_detail/98706.html</a></p>
+<h3 id="拓展知识点：Traceroute"><a href="#拓展知识点：Traceroute" class="headerlink" title="拓展知识点：Traceroute"></a>拓展知识点：Traceroute</h3><p>traceroute 网络测试工具，用于跟踪Internet协议（IP）数据包传送到目标地址时经过的路径。traceroute先发送小的具有最大存活时间值（Max_TTL）的UDP探测数据包，然后侦听从网关开始的整个链路上的ICMP TIME_EXCEEDED响应。探测从TTL=1开始，TTL值逐步增加，直至接收到ICMP PORT_UNREACHABLE消息。ICMP PORT_UNREACHABLE消息用于标识目标主机已经被定位，或命令已经达到允许跟踪的最大TTL值。traceroute默认发送UDP数据包进行链路探测。可以通过“-I”参数来指定使用ICMP数据包进行探测。</p>
+<p>作用：可以定位从源主机到目标主机之间经过了哪些路由器，以及到达各个路由器的耗时。</p>
+<p>相关帮助文档：</p>
+<p><a target="_blank" rel="noopener" href="http://traceroute.sourceforge.net/">http://traceroute.sourceforge.net/</a></p>
+<p><a target="_blank" rel="noopener" href="https://linux.die.net/man/8/traceroute">https://linux.die.net/man/8/traceroute</a></p>
+<h2 id="UDP-PPS测试-和-TCP带宽测试"><a href="#UDP-PPS测试-和-TCP带宽测试" class="headerlink" title="UDP PPS测试 和 TCP带宽测试"></a><strong>UDP PPS测试 和</strong> <strong>TCP带宽测试</strong></h2><h3 id="iperf3"><a href="#iperf3" class="headerlink" title="iperf3"></a>iperf3</h3><p>简介：</p>
+<p>iPerf3 是一种用于主动测量 IP 网络上可实现的最大带宽的工具。它支持调整与时序、缓冲区和协议（TCP、UDP、带有 IPv4 和 IPv6 的 SCTP）相关的各种参数。对于每次测试，它都会报告带宽、损耗和其他参数。</p>
+<p>这是一个新的实现，它不与原始 iPerf 共享代码，也不向后兼容。iPerf 最初是由NLANR/DAST开发的。iPerf3 主要由ESnet /劳伦斯伯克利国家实验室 开发。</p>
+<p>相关帮助文档：</p>
+<p><a target="_blank" rel="noopener" href="https://iperf.fr/">https://iperf.fr/</a></p>
+<p><a target="_blank" rel="noopener" href="http://software.es.net/iperf/index.html">http://software.es.net/iperf/index.html</a></p>
+<h3 id="Netperf"><a href="#Netperf" class="headerlink" title="Netperf"></a>Netperf</h3><p>简介：</p>
+<p>Netperf是一种网络性能的测量工具，主要针对基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/TCP/33012">TCP</a>或<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/UDP/571511">UDP</a>的传输。Netperf根据应用的不同，可以进行不同模式的网络性能测试，即批量数据传输（bulk data transfer）模式和请求/应答（request/reponse）模式。Netperf测试结果所反映的是一个系统能够以多快的速度向另外一个系统发送数据，以及另外一个系统能够以多快的速度接收数据。</p>
+<p>相关帮助文档：</p>
+<p><a target="_blank" rel="noopener" href="https://help.aliyun.com/knowledge_detail/55757.html?spm=5176.21213303.J_6704733920.7.4b0f3edavkBkZV&scm=20140722.S_help@@%E7%9F%A5%E8%AF%86%E7%82%B9@@55757.S_hot+os0.ID_55757-RL_pps%E6%B5%8B%E8%AF%95-OR_helpmain-V_2-P0_0">网络性能测试</a></p>
+<p>扩展知识点：</p>
+<p>Pktgen：<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/260258.htm?spm=a2c4g.11186623.0.0.36005aa38gqGrL">https://help.aliyun.com/document_detail/260258.htm?spm=a2c4g.11186623.0.0.36005aa38gqGrL</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xiaob666.github.io/uncategorized/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -559,18 +755,43 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -610,13 +831,20 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">xiaob</span>
 
   
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
 </div>
 
 
@@ -679,6 +907,9 @@
 
 
 
+  
+  
+
 
 
   
@@ -723,6 +954,11 @@
   
   
     <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
   
