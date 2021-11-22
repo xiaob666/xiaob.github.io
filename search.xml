@@ -24,9 +24,6 @@
 <h3 id="1-FROM"><a href="#1-FROM" class="headerlink" title="1 FROM"></a><strong>1 FROM</strong></h3><p>用法:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br></pre></td></tr></table></figure>
 
-<p>或者</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>FROM指定构建镜像的基础源镜像，如果本地没有指定的镜像，则会自动从 Docker 的公共库 pull 镜像下来。</li>
 <li>FROM必须是 Dockerfile 中非注释行的第一个指令，即一个 Dockerfile 从FROM语句开始。</li>
